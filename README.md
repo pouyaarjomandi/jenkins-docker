@@ -135,11 +135,11 @@ Remove the Jenkins container and delete Jenkins data:
 docker compose down -v
 ```
 
-## Security Note
+## Usage Note
 
-Mounting `/var/run/docker.sock` gives Jenkins high-level access to the host Docker daemon.
+This setup mounts the host Docker socket so Jenkins can run Docker commands from inside the container.
 
-This setup is intended for local learning and portfolio projects. It should be used carefully in shared or production environments.
+It is designed for local development, CI/CD practice, and portfolio projects.
 
 ## Companion Project
 
