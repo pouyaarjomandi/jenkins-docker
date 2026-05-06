@@ -143,6 +143,8 @@ It is designed for local development, CI/CD practice, and portfolio projects.
 
 ## Companion Project
 
-This Jenkins environment can be used with the `python-app-jenkins` project.
+This Jenkins environment can be used with the companion FastAPI project:
+
+[python-app-jenkins](https://github.com/pouyaarjomandi/python-app-jenkins)
 
 The companion project contains a FastAPI application and a Jenkins pipeline that runs tests, builds a Docker image, pushes it to Docker Hub, deploys the container, and verifies the `/health` endpoint.
