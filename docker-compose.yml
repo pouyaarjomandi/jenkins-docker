@@ -1,4 +1,5 @@
 name: jenkins-docker
+
 services:
   jenkins:
     build:
@@ -10,7 +11,7 @@ services:
       - "8080:8080"
       - "50000:50000"
     volumes:
-      - ./jenkins_home:/var/jenkins_home
+      - jenkins_home:/var/jenkins_home
       - /var/run/docker.sock:/var/run/docker.sock
 
     group_add:
@@ -28,9 +29,11 @@ services:
     networks:
       - jenkins_network
 
+volumes:
+  jenkins_home:
+    name: jenkins_home
+
 networks:
   jenkins_network:
     name: jenkins_network
-    driver: bridge  
-
-            
+    driver: bridge
